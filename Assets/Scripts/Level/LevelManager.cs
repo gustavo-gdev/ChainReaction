@@ -314,6 +314,7 @@ public class LevelManager : MonoBehaviour{
         FindObjectOfType<GameOver>().GameOverEnd();
         
         FindObjectOfType<ScoreManager>().SetScore();
+        FindObjectOfType<ScoreManager>().ReloadHiScoreFromSaved();
     }
     
     

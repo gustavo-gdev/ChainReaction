@@ -77,7 +77,7 @@ public class CellMine : Cell{
     // ====== ====== ====== ======
     
     
-    public override void ActivateCell(){
+    public override void ActivateCell(bool addScore = true){
         
         base.ActivateCell();
         

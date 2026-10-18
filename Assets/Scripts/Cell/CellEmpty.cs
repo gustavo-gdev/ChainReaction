@@ -121,14 +121,17 @@ public class CellEmpty : Cell{
     
     
     
-    public override void ActivateCell(){
+    public override void ActivateCell(bool addScore = true){
         
         base.ActivateCell();
         
         AnimationUpdate(animActivate);
         
         FindObjectOfType<CellRevealOvertime>().ResetTimer();
-        FindObjectOfType<ScoreManager>().AddScore(AdjacentMinesCount);
+        if(addScore){
+            
+            FindObjectOfType<ScoreManager>().AddScore(AdjacentMinesCount);
+        }
         
         UpdateValue();
     }

@@ -93,6 +93,12 @@ public class Cell : MonoBehaviour, IInputMouseObject{
     
     public Cell dragOverlayObj;
     
+    public virtual bool CanHoverSound{
+        get{
+            return !marked && !activated;
+        }
+    }
+    
     // ====== ====== ====== ======
     
     
@@ -143,7 +149,10 @@ public class Cell : MonoBehaviour, IInputMouseObject{
             
             hovering = true;
             
-            FindObjectOfType<AudioManager>().Play(SoundsNames.Hover);
+            if(CanHoverSound){
+                
+                FindObjectOfType<AudioManager>().Play(SoundsNames.Hover);
+            }
         }
     }
     
@@ -178,7 +187,7 @@ public class Cell : MonoBehaviour, IInputMouseObject{
 
     public virtual void OnDisable(){ }
     
-    public virtual void ActivateCell(){
+    public virtual void ActivateCell(bool addScore = true){
         
         if(activated || marked) return;
         

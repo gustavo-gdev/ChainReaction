@@ -8,8 +8,6 @@ public class ScoreManager : MonoBehaviour{
     public int hiScoreCurrent;
     public bool newHiScore;
     
-    public Dictionary<GameDifficulty, int> hiScoresDifficulty = new();
-    
     public static int baseScoreMultiplyer = 100;
     
     public event Action OnScoresUpdate;
@@ -63,6 +61,12 @@ public class ScoreManager : MonoBehaviour{
     public void SetHiScore(int hiScore){
         
         hiScoreCurrent = hiScore;
+        HiScoreUpdate();
+    }
+    
+    public void ReloadHiScoreFromSaved(){
+        
+        hiScoreCurrent = GameData.GetHiScore();
         HiScoreUpdate();
     }
     

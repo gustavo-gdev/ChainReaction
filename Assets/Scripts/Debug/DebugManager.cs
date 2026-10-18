@@ -27,6 +27,10 @@ public class DebugManager : MonoBehaviour{
         // PlayerPrefs.SetInt("HiScoreNormal", 150000);
         // PlayerPrefs.SetInt("HiScoreHard", 200000);
         // PlayerPrefs.SetInt("HiScoreExpert", 250000);
+        
+        // PlayerPrefs.SetInt("HiScoreNormal", 0);
+        // PlayerPrefs.SetInt("HiScoreHard", 0);
+        // PlayerPrefs.SetInt("HiScoreExpert", 0);
     }
     
     void Update(){
