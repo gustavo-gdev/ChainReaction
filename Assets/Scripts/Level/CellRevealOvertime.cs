@@ -68,7 +68,7 @@ public class CellRevealOvertime : MonoBehaviour{
         
         if(cell == null) return;
         
-        cell.ActivateCell();
+        cell.ActivateCell(false);
     }
     
     

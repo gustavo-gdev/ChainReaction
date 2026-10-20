@@ -123,7 +123,7 @@ public class CellEmpty : Cell{
     
     public override void ActivateCell(bool addScore = true){
         
-        base.ActivateCell();
+        base.ActivateCell(addScore);
         
         AnimationUpdate(animActivate);
         

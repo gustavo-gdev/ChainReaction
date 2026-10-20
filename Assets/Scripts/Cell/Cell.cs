@@ -194,7 +194,10 @@ public class Cell : MonoBehaviour, IInputMouseObject{
         activated = true;
         marked = false;
         
-        FindObjectOfType<AudioManager>().Play(SoundsNames.Empty);
+        if(addScore){
+            
+            FindObjectOfType<AudioManager>().Play(SoundsNames.Empty);
+        }
         
         _boardGrid.OnActivatedCell(this);
     }
