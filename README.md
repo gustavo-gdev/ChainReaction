@@ -1,4 +1,4 @@
-### Game Chain Reaction ###
+### Chain Reaction Game ###
 
 Chain Reaction is a game that combines Minesweeper and Match-3-Puzzle.
 
